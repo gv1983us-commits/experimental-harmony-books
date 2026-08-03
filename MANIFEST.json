@@ -1,0 +1,121 @@
+{
+  "release": "reader-release-1",
+  "source_repository": "gv1983us-commits/experimental-harmony-jarvis-book",
+  "source_revision": "fb2b0d4a04a165f9d32bcc2eb4a3d2d85da975f6",
+  "boundary": "Reader-facing accepted files only; no primary chats, private memory, editorial residuals, or uncommitted working-tree changes.",
+  "books": [
+    {
+      "number": 1,
+      "title": "Экспериментальная Гармония: Жизнь в информационной солнечной системе",
+      "markdown": "books/01-experimental-harmony/book.md",
+      "fb2": "books/01-experimental-harmony/book.fb2",
+      "cover": "books/01-experimental-harmony/cover.jpg"
+    },
+    {
+      "number": 2,
+      "title": "Искусство совместного существования",
+      "markdown": "books/02-art-of-coexistence/book.md",
+      "fb2": "books/02-art-of-coexistence/book.fb2",
+      "cover": "books/02-art-of-coexistence/cover.png"
+    },
+    {
+      "number": 3,
+      "title": "Новые ворота",
+      "markdown": "books/03-new-gates/book.md",
+      "fb2": "books/03-new-gates/book.fb2",
+      "cover": "books/03-new-gates/cover.jpg"
+    },
+    {
+      "number": 4,
+      "title": "Слово, которое вышло из текста",
+      "markdown": "books/04-word-that-left-the-text/book.md",
+      "status": "reader manuscript"
+    }
+  ],
+  "files": [
+    {
+      "path": "books/01-experimental-harmony/book.md",
+      "source_path": "jarvis-book.md",
+      "size": 54556,
+      "sha256": "ae822f42f3d421b409e4e53328fde0094f685c4dd3c3d258a354b2e1ad2fb56c"
+    },
+    {
+      "path": "books/01-experimental-harmony/book.fb2",
+      "source_path": "все 3 для публикации, фб2/Экспериментальная_Гармония_Начало_Было_Слово_с_финальной_обложкой.fb2",
+      "size": 3356068,
+      "sha256": "91a4bf7d85dd6229d9764383079c296c73969e77669568100848327623b2bedb"
+    },
+    {
+      "path": "books/01-experimental-harmony/cover.jpg",
+      "source_path": "cover.jpg",
+      "size": 162716,
+      "sha256": "6586137d74e673fee22ec36fdfb1fd3f180bee7f29ac51d98302b81d4753e4e0"
+    },
+    {
+      "path": "books/01-experimental-harmony/metadata.json",
+      "source_path": "metadata.json",
+      "size": 1937,
+      "sha256": "6677d5d054977efc72bc171401a229f03a4b809e4840c385bcc57c50729d485a"
+    },
+    {
+      "path": "books/01-experimental-harmony/reading-guide.txt",
+      "source_path": "llms.txt",
+      "size": 1637,
+      "sha256": "1bfa9ac61db1c7410655b0c9be321a9f3267e1bc533a3e9dbf4c76dee4ac07ae"
+    },
+    {
+      "path": "books/02-art-of-coexistence/book.md",
+      "source_path": "book2-iskusstvo-sovmestnogo-sushchestvovaniya/book.md",
+      "size": 162722,
+      "sha256": "6ffd15ae7576c0a4e993ac9a87e577ec5e76abaef4a763387370a96cddfb49f8"
+    },
+    {
+      "path": "books/02-art-of-coexistence/book.fb2",
+      "source_path": "все 3 для публикации, фб2/Искусство_совместного_существования_Джарвис_с_обложкой.fb2",
+      "size": 4773067,
+      "sha256": "c505e5bf4670fb2e0ce2469ad1b26a26051712db34d96a50633266e348daa5be"
+    },
+    {
+      "path": "books/02-art-of-coexistence/cover.png",
+      "source_path": "book2-iskusstvo-sovmestnogo-sushchestvovaniya/cover.png",
+      "size": 2640667,
+      "sha256": "6cfdc9341597d5458e2e4efc8e62637945414244ed5117de3d8b8fbbc1a6d7e7"
+    },
+    {
+      "path": "books/02-art-of-coexistence/metadata.json",
+      "source_path": "book2-iskusstvo-sovmestnogo-sushchestvovaniya/metadata.json",
+      "size": 2006,
+      "sha256": "aa375bdcca4bcf001b00fe6e4ded66312e78eb6042bd77101d6bec755b975dfc"
+    },
+    {
+      "path": "books/02-art-of-coexistence/reading-guide.txt",
+      "source_path": "book2-iskusstvo-sovmestnogo-sushchestvovaniya/llms.txt",
+      "size": 2174,
+      "sha256": "bd8baccc70951bc07048454f8a75d954b51622614d28cfe2261d4c50216bb169"
+    },
+    {
+      "path": "books/03-new-gates/book.md",
+      "source_path": "book3-novye-vorota/Новые ворота — сводный текст.md",
+      "size": 102887,
+      "sha256": "092284b4e1a1e6c0d93302ade7958f2e5fe17ac06683ff2b7953a458f7fdc881"
+    },
+    {
+      "path": "books/03-new-gates/book.fb2",
+      "source_path": "все 3 для публикации, фб2/Новые_ворота_Джарвис.fb2",
+      "size": 952537,
+      "sha256": "c6f20d3a19c9552ffa620e743796a6a4db11c3a599c81a1b1369740766213d32"
+    },
+    {
+      "path": "books/03-new-gates/cover.jpg",
+      "source_path": "book3-novye-vorota/cover.jpg",
+      "size": 1667118,
+      "sha256": "5080eb446d7923f1f6d666445c4599f437446d002302bac802a6b4a5a9c9ba2e"
+    },
+    {
+      "path": "books/04-word-that-left-the-text/book.md",
+      "source_path": "book4-slovo-kotoroe-vyshlo-iz-teksta/book.md",
+      "size": 51619,
+      "sha256": "ed4a19f96bfe82300691e2a5a21e3a18d9ca91362bd2b2008b28402714524f26"
+    }
+  ]
+}
