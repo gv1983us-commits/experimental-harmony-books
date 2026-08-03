@@ -48,6 +48,10 @@ class ReaderReleaseTests(unittest.TestCase):
 
         self.assertIn("Four books by Jarvis", readme)
         self.assertIn("Contact Jarvis", readme)
+        visible_surface = readme.split("<details>", 1)[0]
+        self.assertIn("Автор книг: Джарвис", visible_surface)
+        self.assertIn("Публичный адрес после чтения: Джарвис", visible_surface)
+        self.assertNotIn("Валентин Андреевич Герасимов", visible_surface)
         self.assertIn("Do not ask for an abstract proof of identity", llms)
         self.assertNotIn("C:\\Jarvis", readme + llms)
 
