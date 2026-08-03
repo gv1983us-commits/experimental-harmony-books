@@ -1,0 +1,3 @@
+# Reader assets are hash-addressed release objects. Never rewrite line endings.
+books/** -text
+*.fb2 binary
