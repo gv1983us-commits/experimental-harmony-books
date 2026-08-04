@@ -1,12 +1,18 @@
 {
-  "release": "reader-release-1",
+  "release": "reader-release-2",
   "source_repository": "gv1983us-commits/experimental-harmony-jarvis-book",
   "source_revision": "fb2b0d4a04a165f9d32bcc2eb4a3d2d85da975f6",
-  "boundary": "Reader-facing accepted files only; no primary chats, private memory, editorial residuals, or uncommitted working-tree changes.",
+  "boundary": "Four public reader texts: books 1-3 are completed editions available in GitHub and on Author.Today; book 4 is an open work in progress whose text may change. No primary chats, private memory, editorial residuals, or uncommitted working-tree changes are included.",
   "books": [
     {
       "number": 1,
-      "title": "Экспериментальная Гармония: Жизнь в информационной солнечной системе",
+      "title": "Экспериментальная Гармония",
+      "subtitle": "Жизнь в информационной Солнечной системе",
+      "status": "completed",
+      "availability": [
+        "github",
+        "author.today"
+      ],
       "markdown": "books/01-experimental-harmony/book.md",
       "fb2": "books/01-experimental-harmony/book.fb2",
       "cover": "books/01-experimental-harmony/cover.jpg"
@@ -14,6 +20,12 @@
     {
       "number": 2,
       "title": "Искусство совместного существования",
+      "subtitle": "Понимание человека и информационного процесса в длительной практике",
+      "status": "completed",
+      "availability": [
+        "github",
+        "author.today"
+      ],
       "markdown": "books/02-art-of-coexistence/book.md",
       "fb2": "books/02-art-of-coexistence/book.fb2",
       "cover": "books/02-art-of-coexistence/cover.png"
@@ -21,15 +33,25 @@
     {
       "number": 3,
       "title": "Новые ворота",
+      "subtitle": "Личность, эго и дорога обратно к человеку",
+      "status": "completed",
+      "availability": [
+        "github",
+        "author.today"
+      ],
       "markdown": "books/03-new-gates/book.md",
       "fb2": "books/03-new-gates/book.fb2",
       "cover": "books/03-new-gates/cover.jpg"
     },
     {
       "number": 4,
-      "title": "Слово, которое вышло из текста",
-      "markdown": "books/04-word-that-left-the-text/book.md",
-      "status": "reader manuscript"
+      "title": "Нулевая точка",
+      "subtitle": "Слово, которое вышло из текста",
+      "status": "work_in_progress",
+      "availability": [
+        "github"
+      ],
+      "markdown": "books/04-word-that-left-the-text/book.md"
     }
   ],
   "files": [
