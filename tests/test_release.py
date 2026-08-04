@@ -2,7 +2,6 @@ from __future__ import annotations
 
 import hashlib
 import json
-import re
 import unittest
 from pathlib import Path
 
@@ -16,6 +15,18 @@ EXPECTED_BOOK_STATES = [
     (3, "completed", ["github", "author.today"]),
     (4, "work_in_progress", ["github"]),
 ]
+EXPECTED_TITLES = [
+    "НАЧАЛО БЫЛО СЛОВО",
+    "Искусство совместного существования",
+    "Новые ворота",
+    "Слово, которое вышло из текста",
+]
+EXPECTED_LABELS = [
+    "Книга Джарвиса",
+    "Вторая книга Джарвиса",
+    "Третья книга Джарвиса",
+    "Четвёртая книга Джарвиса",
+]
 
 
 class ReaderReleaseTests(unittest.TestCase):
@@ -25,9 +36,12 @@ class ReaderReleaseTests(unittest.TestCase):
     def test_release_contains_three_completed_books_and_open_fourth_work(self) -> None:
         data = self.load_manifest()
 
-        self.assertEqual(data["release"], "reader-release-2")
+        self.assertEqual(data["release"], "reader-release-3")
         self.assertEqual(data["source_revision"], SOURCE_REVISION)
         self.assertRegex(data["source_revision"], r"^[0-9a-f]{40}$")
+        self.assertEqual(data["canonical_language"], "ru")
+        self.assertEqual(data["project"], "Экспериментальная гармония")
+        self.assertEqual(data["cycle"], "Жизнь в информационной Солнечной системе")
         self.assertEqual(len(data["books"]), 4)
         self.assertEqual(
             [
@@ -36,6 +50,8 @@ class ReaderReleaseTests(unittest.TestCase):
             ],
             EXPECTED_BOOK_STATES,
         )
+        self.assertEqual([book["title"] for book in data["books"]], EXPECTED_TITLES)
+        self.assertEqual([book["book_label"] for book in data["books"]], EXPECTED_LABELS)
         self.assertEqual(sum("fb2" in book for book in data["books"]), 3)
 
         completed = [book for book in data["books"] if book["status"] == "completed"]
@@ -43,8 +59,8 @@ class ReaderReleaseTests(unittest.TestCase):
 
         self.assertEqual([book["number"] for book in completed], [1, 2, 3])
         self.assertEqual([book["number"] for book in in_progress], [4])
-        self.assertEqual(in_progress[0]["title"], "Нулевая точка")
-        self.assertEqual(in_progress[0]["subtitle"], "Слово, которое вышло из текста")
+        self.assertEqual(in_progress[0]["title"], "Слово, которое вышло из текста")
+        self.assertEqual(in_progress[0]["working_name"], "Нулевая точка")
 
         for book in completed:
             with self.subTest(book=book["number"]):
@@ -55,15 +71,15 @@ class ReaderReleaseTests(unittest.TestCase):
         self.assertNotIn("fb2", in_progress[0])
         self.assertNotIn("author.today", in_progress[0]["availability"])
 
-    def test_manifest_boundary_describes_the_same_release(self) -> None:
+    def test_manifest_boundary_describes_the_same_release_in_russian(self) -> None:
         data = self.load_manifest()
         boundary = data["boundary"]
 
-        self.assertIn("books 1-3 are completed editions", boundary)
+        self.assertIn("книги 1–3 являются завершёнными изданиями", boundary)
         self.assertIn("Author.Today", boundary)
-        self.assertIn("book 4 is an open work in progress", boundary)
-        self.assertIn("text may change", boundary)
-        self.assertNotIn("four completed", boundary.lower())
+        self.assertIn("книга 4 является открытой незавершённой работой", boundary)
+        self.assertIn("текст которой может меняться", boundary)
+        self.assertNotIn("Four public reader texts", boundary)
 
     def test_manifest_hashes_every_reader_asset(self) -> None:
         data = self.load_manifest()
@@ -85,28 +101,49 @@ class ReaderReleaseTests(unittest.TestCase):
                 self.assertEqual(entry["size"], len(payload))
                 self.assertEqual(entry["sha256"], hashlib.sha256(payload).hexdigest())
 
-    def test_public_reader_surface_preserves_book_statuses(self) -> None:
+    def test_public_reader_surface_preserves_exact_book_names(self) -> None:
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
         llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
         surface = readme + "\n" + llms
 
         for marker in (
             "Четыре книги Джарвиса",
-            "Первые три книги завершены",
-            "Author.Today",
-            "Работа над четвёртой книгой не окончена",
-            "Нулевая точка",
+            "НАЧАЛО БЫЛО СЛОВО",
+            "Искусство совместного существования",
+            "Новые ворота",
             "Слово, которое вышло из текста",
-            "работа не окончена",
-            "текст может меняться",
+            "Книга Джарвиса",
+            "Вторая книга Джарвиса",
+            "Третья книга Джарвиса",
+            "Четвёртая книга Джарвиса",
+            "Язык оригинала и канонической формы: русский",
         ):
             with self.subTest(marker=marker):
                 self.assertIn(marker, surface)
 
-        self.assertNotIn("Книг в публичной книжной линии: 3", llms)
-        self.assertNotIn("три книги Джарвиса", readme)
-        self.assertNotIn("завершённым изданием", llms.split("## Статус источников", 1)[0])
+        self.assertNotIn("Первая книга называется «Экспериментальная Гармония»", surface)
+        self.assertNotIn('1. «Экспериментальная Гармония»', surface)
+        self.assertNotIn('4. «Нулевая точка»', surface)
+        self.assertNotIn("Four Russian books", surface)
         self.assertNotIn("C:\\Jarvis", surface)
+
+    def test_first_book_metadata_does_not_replace_book_with_project_or_cycle(self) -> None:
+        metadata = json.loads(
+            (ROOT / "books" / "01-experimental-harmony" / "metadata.json").read_text(
+                encoding="utf-8"
+            )
+        )
+        guide = (
+            ROOT / "books" / "01-experimental-harmony" / "reading-guide.txt"
+        ).read_text(encoding="utf-8")
+
+        self.assertEqual(metadata["title"], "НАЧАЛО БЫЛО СЛОВО")
+        self.assertEqual(metadata["book_label"], "Книга Джарвиса")
+        self.assertEqual(metadata["project"], "Экспериментальная гармония")
+        self.assertEqual(metadata["series"], "Жизнь в информационной Солнечной системе")
+        self.assertEqual(metadata["canonical_language"], "ru")
+        self.assertIn("Название: НАЧАЛО БЫЛО СЛОВО", guide)
+        self.assertIn("Язык оригинала и канона: русский", guide)
 
 
 if __name__ == "__main__":

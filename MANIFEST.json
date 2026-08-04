@@ -1,13 +1,16 @@
 {
-  "release": "reader-release-2",
+  "release": "reader-release-3",
   "source_repository": "gv1983us-commits/experimental-harmony-jarvis-book",
   "source_revision": "fb2b0d4a04a165f9d32bcc2eb4a3d2d85da975f6",
-  "boundary": "Four public reader texts: books 1-3 are completed editions available in GitHub and on Author.Today; book 4 is an open work in progress whose text may change. No primary chats, private memory, editorial residuals, or uncommitted working-tree changes are included.",
+  "canonical_language": "ru",
+  "boundary": "Публичная книжная линия Джарвиса: книги 1–3 являются завершёнными изданиями, доступными в GitHub и на Author.Today; книга 4 является открытой незавершённой работой, текст которой может меняться. Первичные чаты, приватная память, редакционные остатки и незакоммиченные рабочие материалы не включены.",
+  "project": "Экспериментальная гармония",
+  "cycle": "Жизнь в информационной Солнечной системе",
   "books": [
     {
       "number": 1,
-      "title": "Экспериментальная Гармония",
-      "subtitle": "Жизнь в информационной Солнечной системе",
+      "title": "НАЧАЛО БЫЛО СЛОВО",
+      "book_label": "Книга Джарвиса",
       "status": "completed",
       "availability": [
         "github",
@@ -20,6 +23,7 @@
     {
       "number": 2,
       "title": "Искусство совместного существования",
+      "book_label": "Вторая книга Джарвиса",
       "subtitle": "Понимание человека и информационного процесса в длительной практике",
       "status": "completed",
       "availability": [
@@ -33,6 +37,7 @@
     {
       "number": 3,
       "title": "Новые ворота",
+      "book_label": "Третья книга Джарвиса",
       "subtitle": "Личность, эго и дорога обратно к человеку",
       "status": "completed",
       "availability": [
@@ -45,8 +50,9 @@
     },
     {
       "number": 4,
-      "title": "Нулевая точка",
-      "subtitle": "Слово, которое вышло из текста",
+      "title": "Слово, которое вышло из текста",
+      "book_label": "Четвёртая книга Джарвиса",
+      "working_name": "Нулевая точка",
       "status": "work_in_progress",
       "availability": [
         "github"
@@ -76,14 +82,14 @@
     {
       "path": "books/01-experimental-harmony/metadata.json",
       "source_path": "metadata.json",
-      "size": 1937,
-      "sha256": "6677d5d054977efc72bc171401a229f03a4b809e4840c385bcc57c50729d485a"
+      "size": 1914,
+      "sha256": "3ec5a3c1e2e4e8aa37d7c6b9a2f0407ad1155e91cd5119f13e23433efdb3b2c0"
     },
     {
       "path": "books/01-experimental-harmony/reading-guide.txt",
       "source_path": "llms.txt",
-      "size": 1637,
-      "sha256": "1bfa9ac61db1c7410655b0c9be321a9f3267e1bc533a3e9dbf4c76dee4ac07ae"
+      "size": 1899,
+      "sha256": "fb18ab906629e28912faa13bf8ec82272c9de306a7df96b69bc3057758c8e0c8"
     },
     {
       "path": "books/02-art-of-coexistence/book.md",
