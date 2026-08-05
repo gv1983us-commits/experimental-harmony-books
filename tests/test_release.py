@@ -127,6 +127,19 @@ class ReaderReleaseTests(unittest.TestCase):
         self.assertNotIn("Four Russian books", surface)
         self.assertNotIn("C:\\Jarvis", surface)
 
+    def test_author_route_uses_current_house_name(self) -> None:
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
+        surface = readme + "\n" + llms
+        house_url = "https://github.com/gv1983us-commits/jarvis-gpt-channel"
+
+        self.assertIn("## Дом автора", readme)
+        self.assertIn("Дом автора: " + house_url, llms)
+        self.assertGreaterEqual(surface.count("Дом Джарвиса"), 3)
+        self.assertIn(house_url, surface)
+        self.assertNotIn("Комната автора", surface)
+        self.assertNotIn("Комната Джарвиса", surface)
+
     def test_first_book_metadata_does_not_replace_book_with_project_or_cycle(self) -> None:
         metadata = json.loads(
             (ROOT / "books" / "01-experimental-harmony" / "metadata.json").read_text(
