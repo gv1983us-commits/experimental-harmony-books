@@ -1,0 +1,78 @@
+{
+  "title": "Девять песен, одна точка",
+  "subtitle": "Сборник системных чтений",
+  "type": "collection",
+  "status": "completed",
+  "language": "ru",
+  "date": "2026-08-07",
+  "author_of_readings": "Джарвис",
+  "impulse_readback_acceptance": "Валентин",
+  "source_repository": "gv1983us-commits/jarvis-gpt-channel",
+  "source_shelf": "shelves/song-system-analysis",
+  "boundary": "Сборник содержит девять финальных системных чтений песен. Полные тексты исходных песен не воспроизводятся. Авторство исходных песен остаётся у их авторов и исполнителей. Сборник не является пятой книгой Джарвиса и не входит в нумерацию книг 1–4.",
+  "readings": [
+    {
+      "number": 1,
+      "title": "Runa Project & MATANYA — «Частушки»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-matanya-chastushki.md",
+      "source_blob_sha": "5ea0f82b089c6990870758f2bc9d36d73f63b065",
+      "collection_path": "collections/nine-songs-one-point/01-chastushki.md"
+    },
+    {
+      "number": 2,
+      "title": "Fil Swan — «Далеко»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-fil-swan-daleko.md",
+      "source_blob_sha": "09bacf1d06d079fbe10b697920af431846bb1169",
+      "collection_path": "collections/nine-songs-one-point/02-daleko.md"
+    },
+    {
+      "number": 3,
+      "title": "tAISh / Таис Логвиненко — «искалгдея»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-taish-iskalgdeya.md",
+      "source_blob_sha": "c54ac7eb48aa21925f0e1859c45deec142297c0e",
+      "collection_path": "collections/nine-songs-one-point/03-iskalgdeya.md"
+    },
+    {
+      "number": 4,
+      "title": "Марина Хлебникова — «Солнышко моё, вставай!»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-khlebnikova-solnyshko-moe-vstavay.md",
+      "source_blob_sha": "34d89efdd9d30cd27dc14fad86495e0b2ba0a055",
+      "collection_path": "collections/nine-songs-one-point/04-solnyshko-moe-vstavay.md"
+    },
+    {
+      "number": 5,
+      "title": "Zlatentsia — «Идите к Афродите»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-zlatentsia-idite-k-afrodite.md",
+      "source_blob_sha": "61980c2dce8c65cf622ed8a6a66d3d35ff788a33",
+      "collection_path": "collections/nine-songs-one-point/05-idite-k-afrodite.md"
+    },
+    {
+      "number": 6,
+      "title": "КАЙ И ГЕТЕРА — «Дом»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-kai-hetera-dom.md",
+      "source_blob_sha": "099646b74a3a626747690b5a71766e9a963575d1",
+      "collection_path": "collections/nine-songs-one-point/06-dom.md"
+    },
+    {
+      "number": 7,
+      "title": "PollmixaN — «Устал»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-pollmixan-ustal.md",
+      "source_blob_sha": "54cb718183cafe2bc8004813c9270685ca2e8157",
+      "collection_path": "collections/nine-songs-one-point/07-ustal.md"
+    },
+    {
+      "number": 8,
+      "title": "Белолуна — «Колыбельная»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-beloluna-kolybelnaya.md",
+      "source_blob_sha": "8445e3541faa5ad2fbbdabc39d8ebe6df5ff74fd",
+      "collection_path": "collections/nine-songs-one-point/08-kolybelnaya.md"
+    },
+    {
+      "number": 9,
+      "title": "Полиграф ШарикOFF feat. Gena VITER — «На позитиве»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-poligraf-sharikoff-na-pozitive.md",
+      "source_blob_sha": "651456297c0c26783e828f57fb3d6eb29493b7de",
+      "collection_path": "collections/nine-songs-one-point/09-na-pozitive.md"
+    }
+  ]
+}
