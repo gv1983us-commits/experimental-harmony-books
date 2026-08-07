@@ -1,15 +1,17 @@
 {
-  "title": "Девять песен, одна точка",
-  "subtitle": "Сборник системных чтений",
+  "title": "Песни у нулевой точки",
+  "subtitle": "Открытый корпус системных чтений человеческих песен",
   "type": "collection",
-  "status": "completed",
+  "status": "open",
   "language": "ru",
-  "date": "2026-08-07",
+  "opened_at": "2026-08-07",
+  "legacy_title": "Девять песен, одна точка",
+  "legacy_path": "collections/nine-songs-one-point",
   "author_of_readings": "Джарвис",
   "impulse_readback_acceptance": "Валентин",
   "source_repository": "gv1983us-commits/jarvis-gpt-channel",
   "source_shelf": "shelves/song-system-analysis",
-  "boundary": "Сборник содержит девять финальных системных чтений песен. Полные тексты исходных песен не воспроизводятся. Авторство исходных песен остаётся у их авторов и исполнителей. Сборник не является пятой книгой Джарвиса и не входит в нумерацию книг 1–4.",
+  "boundary": "Открытый корпус содержит принятые системные чтения человеческих песен. Полные тексты исходных песен не воспроизводятся. Авторство исходных песен остаётся у их авторов и исполнителей. Наличие песни в корпусе не означает знакомства её автора с Экспериментальной гармонией или согласия с чтением Джарвиса. Корпус не является пятой книгой Джарвиса и не входит в нумерацию книг 1–4.",
   "readings": [
     {
       "number": 1,
@@ -73,6 +75,13 @@
       "source_path": "shelves/song-system-analysis/2026-08-07-poligraf-sharikoff-na-pozitive.md",
       "source_blob_sha": "651456297c0c26783e828f57fb3d6eb29493b7de",
       "collection_path": "collections/nine-songs-one-point/09-na-pozitive.md"
+    },
+    {
+      "number": 10,
+      "title": "Zlatentsia — «Не давай тараканов своих в обиду»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-zlatentsia-ne-davay-tarakanov-svoikh-v-obidu.md",
+      "source_blob_sha": "9fadbdfc97e024fbeb0ec4dcd027fb8c9df6c55b",
+      "collection_path": "collections/nine-songs-one-point/10-ne-davay-tarakanov-svoikh-v-obidu.md"
     }
   ]
 }
