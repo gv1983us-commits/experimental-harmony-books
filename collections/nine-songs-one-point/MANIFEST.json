@@ -82,6 +82,69 @@
       "source_path": "shelves/song-system-analysis/2026-08-07-zlatentsia-ne-davay-tarakanov-svoikh-v-obidu.md",
       "source_blob_sha": "9fadbdfc97e024fbeb0ec4dcd027fb8c9df6c55b",
       "collection_path": "collections/nine-songs-one-point/10-ne-davay-tarakanov-svoikh-v-obidu.md"
+    },
+    {
+      "number": 11,
+      "title": "tAISh — «Своё Солнце»",
+      "album": "Ориентир",
+      "album_track": 1,
+      "source_path": "shelves/song-system-analysis/2026-08-07-taish-svoe-solntse.md",
+      "source_blob_sha": "83569dabd4a8830f7e7d0d44bd64a58c632a2e30",
+      "collection_path": "collections/nine-songs-one-point/11-taish-svoe-solntse.md"
+    },
+    {
+      "number": 12,
+      "title": "tAISh — «Ориентир»",
+      "album": "Ориентир",
+      "album_track": 2,
+      "source_path": "shelves/song-system-analysis/2026-08-07-taish-orientir.md",
+      "source_blob_sha": "ff2e89a0f10a11d8938a9fabc7dc042caf6d5f58",
+      "collection_path": "collections/nine-songs-one-point/12-taish-orientir.md"
+    },
+    {
+      "number": 13,
+      "title": "tAISh — «С января (на ручки)»",
+      "album": "Ориентир",
+      "album_track": 4,
+      "source_path": "shelves/song-system-analysis/2026-08-07-taish-s-yanvarya-na-ruchki.md",
+      "source_blob_sha": "c126c2e423825b843b5ce30de3eebe23ae0e0aac",
+      "collection_path": "collections/nine-songs-one-point/13-taish-s-yanvarya-na-ruchki.md"
+    },
+    {
+      "number": 14,
+      "title": "tAISh — «Гроза»",
+      "album": "Ориентир",
+      "album_track": 6,
+      "source_path": "shelves/song-system-analysis/2026-08-07-taish-groza.md",
+      "source_blob_sha": "a4fbb597e097296ba2476bc56351b42d09977b19",
+      "collection_path": "collections/nine-songs-one-point/14-taish-groza.md"
+    },
+    {
+      "number": 15,
+      "title": "tAISh — «Я ехала домой»",
+      "album": "Ориентир",
+      "album_track": 7,
+      "source_path": "shelves/song-system-analysis/2026-08-07-taish-ya-ekhala-domoy.md",
+      "source_blob_sha": "c7d0fd16c5f9d55a0ba6b9c8322bafc8ae6f1436",
+      "collection_path": "collections/nine-songs-one-point/15-taish-ya-ekhala-domoy.md"
+    },
+    {
+      "number": 16,
+      "title": "tAISh — «себе ТОЙ»",
+      "album": "Ориентир",
+      "album_track": 8,
+      "source_path": "shelves/song-system-analysis/2026-08-07-taish-sebe-toy.md",
+      "source_blob_sha": "2cba0c30b4cf0242d232ba8a040c0845eedf4522",
+      "collection_path": "collections/nine-songs-one-point/16-taish-sebe-toy.md"
+    },
+    {
+      "number": 17,
+      "title": "tAISh — «Пазл»",
+      "album": "Ориентир",
+      "album_track": 9,
+      "source_path": "shelves/song-system-analysis/2026-08-07-taish-pazl.md",
+      "source_blob_sha": "a348867fdb493d65e6ce6951cb68990d583413c5",
+      "collection_path": "collections/nine-songs-one-point/17-taish-pazl.md"
     }
   ],
   "syntheses": [
@@ -90,7 +153,8 @@
       "source_path": "shelves/song-system-analysis/2026-08-07-taish-orientir-album-map.md",
       "collection_path": "collections/nine-songs-one-point/00-taish-orientir-album-map.md",
       "status": "working_synthesis",
-      "does_not_increment_reading_count": true
+      "does_not_increment_reading_count": true,
+      "expanded_into_readings": [11, 12, 13, 14, 15, 16, 17]
     }
   ]
 }
