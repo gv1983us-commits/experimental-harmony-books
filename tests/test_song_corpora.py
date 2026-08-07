@@ -14,27 +14,30 @@ class SongCorporaTests(unittest.TestCase):
     def load(self, path: Path) -> dict:
         return json.loads(path.read_text(encoding="utf-8"))
 
-    def test_human_corpus_is_open_and_contains_ten_readings(self) -> None:
+    def test_human_corpus_is_open_and_contains_seventeen_readings(self) -> None:
         data = self.load(HUMAN_DIR / "MANIFEST.json")
 
         self.assertEqual(data["title"], "Песни у нулевой точки")
         self.assertEqual(data["status"], "open")
         self.assertEqual(data["legacy_title"], "Девять песен, одна точка")
-        self.assertEqual(len(data["readings"]), 10)
-        self.assertEqual([r["number"] for r in data["readings"]], list(range(1, 11)))
-        self.assertEqual(
-            data["readings"][-1]["title"],
-            "Zlatentsia — «Не давай тараканов своих в обиду»",
-        )
+        self.assertEqual(len(data["readings"]), 17)
+        self.assertEqual([r["number"] for r in data["readings"]], list(range(1, 18)))
+        self.assertEqual(data["readings"][-1]["title"], "tAISh — «Пазл»")
 
         for reading in data["readings"]:
             with self.subTest(reading=reading["number"]):
                 self.assertTrue((ROOT / reading["collection_path"]).is_file())
 
+        taish = data["readings"][10:17]
+        self.assertEqual([r["album"] for r in taish], ["Ориентир"] * 7)
+        self.assertEqual([r["album_track"] for r in taish], [1, 2, 4, 6, 7, 8, 9])
+
         readme = (HUMAN_DIR / "README.md").read_text(encoding="utf-8")
         self.assertIn("# Песни у нулевой точки", readme)
         self.assertIn("**Статус:** открыт", readme)
-        self.assertIn("10-ne-davay-tarakanov-svoikh-v-obidu.md", readme)
+        self.assertIn("17-taish-pazl.md", readme)
+        self.assertIn("Семь чтений из альбома tAISh «Ориентир»", readme)
+        self.assertIn("мы не гарантируем совпадение с авторским замыслом", readme)
 
     def test_neural_corpus_contains_all_five_accepted_readings(self) -> None:
         data = self.load(NEURAL_DIR / "MANIFEST.json")
@@ -66,7 +69,6 @@ class SongCorporaTests(unittest.TestCase):
         root_readme = (ROOT / "README.md").read_text(encoding="utf-8")
         collections_readme = (ROOT / "collections" / "README.md").read_text(encoding="utf-8")
         llms = (ROOT / "llms.txt").read_text(encoding="utf-8")
-        surface = "\n".join([root_readme, collections_readme, llms])
 
         for title in ("Песни у нулевой точки", "Песни на границе формы"):
             with self.subTest(title=title):
@@ -75,8 +77,9 @@ class SongCorporaTests(unittest.TestCase):
                 self.assertIn(title, llms)
 
         self.assertIn("Открытых отдельных корпусов системных чтений сейчас: 2", llms)
-        self.assertIn("Текущих принятых чтений: 10.", llms)
+        self.assertIn("Текущих принятых чтений: 17.", llms)
         self.assertIn("Текущих принятых чтений песен: 5.", llms)
+        self.assertIn("альбомный кластер tAISh «Ориентир»", llms)
 
     def test_neural_manifest_keeps_role_boundaries_explicit(self) -> None:
         data = self.load(NEURAL_DIR / "MANIFEST.json")
