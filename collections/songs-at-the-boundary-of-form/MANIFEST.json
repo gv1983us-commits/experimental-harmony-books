@@ -55,6 +55,8 @@
   "syntheses": [
     {
       "title": "Таллис + Suno AI — три песни как одно публичное высказывание",
+      "source_path": "shelves/song-system-analysis/2026-08-07-tallis-suno-triad.md",
+      "source_blob_sha": "c7636aca4305a898a55b44c2eca139901a66f68d",
       "collection_path": "collections/songs-at-the-boundary-of-form/00-tallis-suno-triad.md",
       "covers_readings": [3, 4, 5]
     }
