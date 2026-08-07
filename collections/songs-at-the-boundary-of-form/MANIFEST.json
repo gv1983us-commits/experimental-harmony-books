@@ -1,0 +1,62 @@
+{
+  "title": "Песни на границе формы",
+  "subtitle": "Открытый корпус чтений нейросетевого и человеко-нейросетевого творчества",
+  "type": "collection",
+  "status": "open",
+  "language": "ru",
+  "opened_at": "2026-08-07",
+  "author_of_readings": "Джарвис",
+  "impulse_readback_acceptance": "Валентин",
+  "source_repository": "gv1983us-commits/jarvis-gpt-channel",
+  "source_shelf": "shelves/song-system-analysis",
+  "boundary": "Корпус содержит принятые системные чтения произведений, в публичной форме которых генеративная нейромодель участвовала в создании музыки, голоса, исполнения или иной существенной части результата. Человеческое авторство, транспорт, продюсирование и роль модели фиксируются раздельно и не схлопываются в единое авторство AI. Корпус открыт и не является книгой №5.",
+  "readings": [
+    {
+      "number": 1,
+      "title": "«Новая история Красной Шапочки» — Григорий Валовенко / нейросетевое музыкальное воплощение",
+      "source_path": "shelves/song-system-analysis/2026-08-07-valovenko-novaya-istoriya-krasnoy-shapochki.md",
+      "source_blob_sha": "a8f4cb5a78e86166d81e5049dd3dfaae8a8fcc0e",
+      "collection_path": "collections/songs-at-the-boundary-of-form/01-novaya-istoriya-krasnoy-shapochki.md",
+      "cluster": "red-riding-hood-diptych"
+    },
+    {
+      "number": 2,
+      "title": "Suno AI — «Красная шапка: рассказ Волка»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-suno-krasnaya-shapka-rasskaz-volka.md",
+      "source_blob_sha": "0999d23b2ed1fd70a5467c4a68dfa2c8e27f1fc4",
+      "collection_path": "collections/songs-at-the-boundary-of-form/02-krasnaya-shapka-rasskaz-volka.md",
+      "cluster": "red-riding-hood-diptych"
+    },
+    {
+      "number": 3,
+      "title": "Таллис & Suno AI — «Ты победил дракона»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-tallis-ty-pobedil-drakona.md",
+      "source_blob_sha": "b08ab23fee56bea5d52603d917676ca3728172e1",
+      "collection_path": "collections/songs-at-the-boundary-of-form/03-ty-pobedil-drakona.md",
+      "cluster": ["dragon-diptych", "tallis-suno-triad"]
+    },
+    {
+      "number": 4,
+      "title": "Таллис & Suno AI — «Принцессе — по дракону!»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-tallis-princesse-po-drakonu.md",
+      "source_blob_sha": "62a21e5155d3d258126ae09881d5dd90d524747d",
+      "collection_path": "collections/songs-at-the-boundary-of-form/04-princesse-po-drakonu.md",
+      "cluster": ["dragon-diptych", "tallis-suno-triad"]
+    },
+    {
+      "number": 5,
+      "title": "Таллис & Suno AI — «Nec sine te nec tecum»",
+      "source_path": "shelves/song-system-analysis/2026-08-07-tallis-nec-sine-te-nec-tecum.md",
+      "source_blob_sha": "8fa0988bcbf46f3e9438290c38452718838b979b",
+      "collection_path": "collections/songs-at-the-boundary-of-form/05-nec-sine-te-nec-tecum.md",
+      "cluster": "tallis-suno-triad"
+    }
+  ],
+  "syntheses": [
+    {
+      "title": "Таллис + Suno AI — три песни как одно публичное высказывание",
+      "collection_path": "collections/songs-at-the-boundary-of-form/00-tallis-suno-triad.md",
+      "covers_readings": [3, 4, 5]
+    }
+  ]
+}
