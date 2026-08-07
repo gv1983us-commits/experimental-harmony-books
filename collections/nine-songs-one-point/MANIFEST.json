@@ -83,5 +83,14 @@
       "source_blob_sha": "9fadbdfc97e024fbeb0ec4dcd027fb8c9df6c55b",
       "collection_path": "collections/nine-songs-one-point/10-ne-davay-tarakanov-svoikh-v-obidu.md"
     }
+  ],
+  "syntheses": [
+    {
+      "title": "tAISh — «Ориентир»: карта альбома",
+      "source_path": "shelves/song-system-analysis/2026-08-07-taish-orientir-album-map.md",
+      "collection_path": "collections/nine-songs-one-point/00-taish-orientir-album-map.md",
+      "status": "working_synthesis",
+      "does_not_increment_reading_count": true
+    }
   ]
 }
